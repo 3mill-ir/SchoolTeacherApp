@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nomreh"
+        android:icon="@drawable/ic_grain"
+        android:title="نمره"/>
+
+
+    <item
+        android:id="@+id/homework"
+        android:icon="@drawable/ic_business_center_white_24dp"
+        android:title="تکالیف"
+        />
+
+    <item
+        android:id="@+id/absent"
+        android:icon="@drawable/ic_assignment_turned_in_white_24dp"
+        android:title="حضورغیاب"/>
+
+
+    <item
+        android:id="@+id/rate"
+        android:icon="@drawable/ic_stat_star"
+        android:title="امتیاز"/>
+
+
+    <item
+        android:id="@+id/chat"
+        android:icon="@drawable/ic_stat_chat"
+        android:title="چت"/>
+</menu>
+

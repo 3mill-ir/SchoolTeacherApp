@@ -24,6 +24,9 @@ public class Utils {
         } else if (roz == 0 && zang == 3) {
             return R.id.zangcharom_col1_shanbe_3;
 
+        } else if (roz == 0 && zang == 4) {
+            return R.id.zangpanjom_col1_shanbe_3;
+
         } else if (roz == 1 && zang == 0) {
             return R.id.zangaval_col2_yeshanbe_3;
 
@@ -35,6 +38,9 @@ public class Utils {
 
         } else if (roz == 1 && zang == 3) {
             return R.id.zangcharom_col2_yeshanbe_3;
+
+        } else if (roz == 1 && zang == 4) {
+            return R.id.zangpanjom_col2_yeshanbe_3;
 
         } else if (roz == 2 && zang == 0) {
             return R.id.zangaval_col3_dushanbe_3;
@@ -48,6 +54,9 @@ public class Utils {
         } else if (roz == 2 && zang == 3) {
             return R.id.zangcharom_col3_dushanbe_3;
 
+        } else if (roz == 2 && zang == 4) {
+            return R.id.zangpanjom_col3_dushanbe_3;
+
         } else if (roz == 3 && zang == 0) {
             return R.id.zangaval_col4_seshanbe_3;
 
@@ -59,6 +68,9 @@ public class Utils {
 
         } else if (roz == 3 && zang == 3) {
             return R.id.zangcharom_col4_seshanbe_3;
+
+        } else if (roz == 3 && zang == 4) {
+            return R.id.zangpanjom_col4_seshanbe_3;
 
         } else if (roz == 4 && zang == 0) {
             return R.id.zangaval_col5_charshanbe_3;
@@ -72,6 +84,9 @@ public class Utils {
         } else if (roz == 4 && zang == 3) {
             return R.id.zangcharom_col5_charshanbe_3;
 
+        } else if (roz == 4 && zang == 4) {
+            return R.id.zangpanjom_col5_charshanbe_3;
+
         } else if (roz == 5 && zang == 0) {
             return R.id.zangaval_col6_panjshanbe_3;
 
@@ -83,6 +98,9 @@ public class Utils {
 
         } else if (roz == 5 && zang == 3) {
             return R.id.zangcharom_col6_panjshanbe_3;
+
+        } else if (roz == 5 && zang == 4) {
+            return R.id.zangpanjom_col6_panjshanbe_3;
 
         } else {
             return R.id.zangaval_col1_shanbe_3;

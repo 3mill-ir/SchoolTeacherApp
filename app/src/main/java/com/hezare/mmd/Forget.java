@@ -22,7 +22,6 @@ public class Forget extends AppCompatActivity {
 
 
     ProgressDialog loading;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +39,6 @@ public class Forget extends AppCompatActivity {
                 }
 
                 doForget(phone);
-
             }
         });
 

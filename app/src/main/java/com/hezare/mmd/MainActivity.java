@@ -280,6 +280,11 @@ public class MainActivity extends AppCompatActivity {
 
                             }*/
 
+                            if (Zang.equals("4")) {
+                                //Log.e("Zang","5zange");
+                                findViewById(R.id.column_5zange).setVisibility(View.VISIBLE);
+                            }
+
                             Random r = new Random();
                             int c = Color.argb(255, r.nextInt(256), r.nextInt(256), r.nextInt(256));
                             String color = "#" + Integer.toHexString(c).toUpperCase().substring(2);

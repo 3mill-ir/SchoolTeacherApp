@@ -2,6 +2,7 @@ package com.hezare.mmd;
 
 import android.app.Application;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.text.TextUtils;
 
@@ -89,6 +90,14 @@ public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+
+        final SharedPreferences pref = getSharedPreferences("ShowDialog", 0);
+        final SharedPreferences.Editor editor = pref.edit();
+        editor.putBoolean("ShowDialog", true);
+        editor.apply();
+        editor.commit();
+
+
         c = getApplicationContext();
         CookieHandler.setDefault(new CookieManager(null, CookiePolicy.ACCEPT_ALL));
         AndroidNetworking.initialize(getApplicationContext());

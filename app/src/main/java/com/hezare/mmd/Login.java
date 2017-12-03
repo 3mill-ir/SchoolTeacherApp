@@ -5,6 +5,7 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
@@ -16,6 +17,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import com.hezare.mmd.Utils.AppUpdate;
 import com.hezare.mmd.WebSide.Parser;
 import com.hezare.mmd.WebSide.SendRequest;
 
@@ -38,7 +40,17 @@ public class Login extends AppCompatActivity {
             } else {
                 Toast.makeText(this, "به اینترنت متصل نیستید", Toast.LENGTH_LONG).show();
             }
-            ;
+
+        } else {
+            final SharedPreferences pref = getSharedPreferences("ShowDialog", 0);
+            Log.i("showDialog", String.valueOf(pref.getBoolean("ShowDialog", false)));
+            if (pref.getBoolean("ShowDialog", false)) {
+                try {
+                    new AppUpdate(this).check_Version();
+                } catch (PackageManager.NameNotFoundException e) {
+                    e.printStackTrace();
+                }
+            }
         }
 
         setContentView(R.layout.login);

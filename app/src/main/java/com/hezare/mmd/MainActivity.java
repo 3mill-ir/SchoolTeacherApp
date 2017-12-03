@@ -5,6 +5,7 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -31,6 +32,7 @@ import android.widget.Toast;
 import com.hezare.mmd.Adapters.ClassCheckBoxAdapter;
 import com.hezare.mmd.Adapters.Drawer_List_Adapter;
 import com.hezare.mmd.Models.ClassCheckBoxModel;
+import com.hezare.mmd.Utils.AppUpdate;
 import com.hezare.mmd.Utils.Utils;
 import com.hezare.mmd.WebSide.Parser;
 import com.hezare.mmd.WebSide.SendRequest;
@@ -315,6 +317,16 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        final SharedPreferences pref = getSharedPreferences("ShowDialog", 0);
+        Log.i("showDialog", String.valueOf(pref.getBoolean("ShowDialog", false)));
+        if (pref.getBoolean("ShowDialog", false)) {
+            try {
+                new AppUpdate(this).check_Version();
+            } catch (PackageManager.NameNotFoundException e) {
+                e.printStackTrace();
+            }
+        }
 
 
     }
